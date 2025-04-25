@@ -1,4 +1,4 @@
-function AdminHeader() {
+function Header() {
   return (
     <div className='flex items-end justify-between'>
       <h1 className="text-3xl">Hello <br/><span className="text-4xl text-semibold">Smit</span></h1>
@@ -12,4 +12,4 @@ function AdminHeader() {
   );
 }
 
-export default AdminHeader;
+export default Header;

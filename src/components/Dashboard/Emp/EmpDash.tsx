@@ -1,12 +1,12 @@
 import TaskList from '../../Tasks/TaskList';
-import AdminHeader from '../Admin/AdminHeader';
-import TaskLists from '../Admin/TaskLists';
+import Header from '../Header';
+import TaskStatus from './../Admin/TaskStatus';
 
 function EmpDash() {
   return (
     <>
-        <AdminHeader/>
-        <TaskLists/>
+        <Header/>
+        <TaskStatus/>
         <TaskList/>
     </>
     

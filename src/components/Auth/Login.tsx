@@ -1,12 +1,16 @@
 import { useState } from "react";
 
-function Login() {
+interface LoginProps {
+  handleLogin: (email: string, password: string) => void;
+}
+
+function Login({ handleLogin }: LoginProps) {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("welcome");
+    handleLogin(email,pass)
   };
   return (
     <div className="flex items-center justify-center">

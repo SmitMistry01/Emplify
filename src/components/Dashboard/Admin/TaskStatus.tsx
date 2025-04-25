@@ -1,4 +1,4 @@
-function TaskLists() {
+function TaskStatus() {
   return (
     <div className="flex mt-10 justify-between gap-5 screen">
         <div className="h-40 w-1/4 bg-red-300 p-5 rounded-2xl ">
@@ -21,4 +21,4 @@ function TaskLists() {
   )
 }
 
-export default TaskLists
+export default TaskStatus
