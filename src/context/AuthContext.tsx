@@ -1,9 +1,0 @@
-import { ReactNode } from "react"
-
-function AuthContext({children} : {children:ReactNode}) {
-  return (
-    <div>{children}</div>
-  )
-}
-
-export default AuthContext
