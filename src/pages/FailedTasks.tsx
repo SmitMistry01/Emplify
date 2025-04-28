@@ -1,4 +1,4 @@
-function FailedTasks({data}:any) {
+function FailedTasks() {
   return (
     <div className="p-10">
         <div className="overflow-x-auto py-5 no-scrollbar">
