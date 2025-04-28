@@ -1,12 +1,11 @@
 import TaskList from '../../Tasks/TaskList';
-import Header from '../Header';
 import TaskStatus from './TaskStatus';
 
 interface EmpDashProps{
   data:any;
   onLogout:() => void;
 }
-function EmpDash({data,onLogout}:EmpDashProps) {
+function EmpDash({data}:EmpDashProps) {
   console.log(data);
   
   return (
