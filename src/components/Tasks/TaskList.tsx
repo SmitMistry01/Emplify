@@ -1,21 +1,28 @@
-function TaskList({data}:any) {
-    return (
-      <div className="p-10">
-        <div className="overflow-x-auto py-5 no-scrollbar">
-          <div className="flex flex-nowrap gap-5">
-            {/* Task Card 1 */}
-            <div className="flex-shrink-0 w-[320px] h-[350px] bg-blue-500 rounded-lg shadow-md hover:shadow-lg transition p-5">
-              <div className="flex items-end justify-between">
-                <h3 className=" rounded-xl bg-red-500 font-bold p-1 px-4">High</h3>
-                <h4 className="p-1">25 March 2025</h4>
-              </div>
-              <h1 className="text-2xl font-semibold mt-10 mb-10">Task</h1>
-              <p className="text-gray-600">Description goes here...</p>
-            </div>
-          </div>
+import ActiveTasks from "../../pages/ActiveTasks";
+import CompletedTasks from "../../pages/CompletedTasks";
+import FailedTasks from "../../pages/FailedTasks";
+import NewTasks from "../../pages/NewTasks";
+
+function TaskList({ data }: any) {
+  return (
+    <div className="p-10">
+      <div className="overflow-x-auto py-5 no-scrollbar">
+        <div className="flex flex-nowrap gap-5">
+          {data.tasks.map((elem: any,idx:number) => {
+            if (elem.active) {
+              return <ActiveTasks data={data} key = {idx} />;
+            } else if (elem.complete) {
+              return <CompletedTasks data={data} key = {idx} />;
+            } else if (elem.new) {
+              return <NewTasks data={data} key = {idx} />;
+            } else if (elem.failed) {
+              return <FailedTasks data={data} key = {idx}/>;
+            }
+          })}
         </div>
       </div>
-    );
-  }
-  
-  export default TaskList;
+    </div>
+  );
+}
+
+export default TaskList;

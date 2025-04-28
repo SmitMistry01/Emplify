@@ -4,13 +4,14 @@ import TaskStatus from './TaskStatus';
 
 interface EmpDashProps{
   data:any;
+  onLogout:() => void;
 }
-function EmpDash({data}:EmpDashProps) {
+function EmpDash({data,onLogout}:EmpDashProps) {
   console.log(data);
   
   return (
     <>
-        <Header data={data} />
+        {/* <Header onLogout={onLogout} data={data} /> */}
         <TaskStatus data = {data}/>
         <TaskList data = {data}/>
     </>

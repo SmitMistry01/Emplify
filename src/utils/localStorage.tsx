@@ -1,5 +1,3 @@
-localStorage.clear()
-
 const admin = {
   "id": 0,
   "name": "Aarav Sharma",
